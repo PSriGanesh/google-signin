@@ -14,8 +14,14 @@ function googlesignin(){
         console.log(response);
         acctoken=response.access_token
         localStorage.acctoken=acctoken
-        changeSignInState()
-        document.querySelector(`.side-btn[data-index="${currentProjectIndex}"]`).click();
+        //changeSignInState()
+        let ac = document.createElement('div')
+        ac.textContent='Your Access Token is: '
+        document.body.appendChild(ac)
+        ac = document.createElement('div')
+        ac.style.cssText='word-wrap: normal'
+        ac.textContent=acctoken
+        document.body.appendChild(ac)
       },
     });
     client.requestAccessToken()
