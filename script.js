@@ -19,7 +19,7 @@ function googlesignin(){
         ac.textContent='Your Access Token is: '
         document.body.appendChild(ac)
         ac = document.createElement('div')
-        ac.style.cssText='word-wrap: normal'
+        ac.style.cssText='word-break: break-all'
         ac.textContent=acctoken
         document.body.appendChild(ac)
       },
