@@ -16,11 +16,14 @@ function googlesignin(){
         localStorage.acctoken=acctoken
         //changeSignInState()
         let ac = document.createElement('div')
-        ac.textContent='Your Access Token is: '
+        ac.innerHTML='Your Access Token is: <br /><br />'
         document.body.appendChild(ac)
         ac = document.createElement('div')
         ac.style.cssText='word-break: break-all'
         ac.textContent=acctoken
+        document.body.appendChild(ac)
+        ac = document.createElement('div')
+        ac.innerHTML='<br /> Copy and paste this access code in the previous page'
         document.body.appendChild(ac)
       },
     });
